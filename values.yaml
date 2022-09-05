@@ -9,10 +9,10 @@ spec:
   - name: http
     port: 8080
     targetPort: 8080
-    nodePort: 30029
+    #nodePort: 30029
   selector:
     app: camunda
-  type: NodePort
+  type: ClusterIP
 ---
 apiVersion: apps/v1
 kind: Deployment
