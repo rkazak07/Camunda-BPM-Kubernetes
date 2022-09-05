@@ -1,0 +1,23 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+
+metadata:
+  name: camunda
+  annotations:
+    #certmanager.k8s.io/cluster-issuer: "letsencrypt-prod-cluster"
+    kubernetes.io/ingress.class: "nginx"
+    #kubernetes.io/tls-acme: "true"
+spec:
+  rules:
+    - host: camunda.192.168.10.127.nip.io
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: camunda
+              servicePort: http
+
+#tls:
+#    - hosts:
+#      - camunda.192.168.10.127.nip.io
+#      secretName: camunda-tls
