@@ -1,20 +1,16 @@
-# Camunda-Kubernetes-Deploy
-camunda-bpm-kubernetes-deploy
+# Camunda-Bpm-Kubernetes-Deploy
+## In case of need , you can change image in values file.
+## You can set our host or tls in ‘ingress.yaml’ file.
 
-## values Dosyasındaki image'ı ihtiyaç halinde değiştirebilirsiniz.
-## ingress.yaml dosyamızı host vs tls ayarlamanızı yapabilirsiniz.
-
-## Öncelikle Namespace oluşturuyoruz.
+## First of all , we create the Namespace.
 ```
-kubectl create ns camunda-bpm
+ kubectl create ns camunda-bpm
 ```
-## 'values.yaml' dosyamızı düzenliyoruz.
-
+## Then , we edit the our ‘values.yaml’ file.
 ```
 kubectl apply -f values.yaml -n camunda-bpm
 ```
-## ingress.yaml dosyasınız deploy ediyoruz.
-
+## And we deploy the ‘ingress.yaml’ file.
 ```
 kubectl apply -f ingress.yaml -n camunda-bpm
 ```
