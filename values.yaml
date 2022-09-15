@@ -32,7 +32,7 @@ spec:
     spec:
       containers:
       - name: camunda
-        image: camunda/camunda-bpm-platform:latest
+        image: kazak1/camunda:latest
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8080
