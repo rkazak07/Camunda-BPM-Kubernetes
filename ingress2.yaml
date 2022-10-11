@@ -7,8 +7,12 @@ metadata:
     kubernetes.io/ingress.class: "nginx"
     #kubernetes.io/tls-acme: "true"
 spec:
+  tls:
+  - hosts:
+    - hostname
+    secretName: lcoal-tls
   rules:
-    - host: camunda.ticaret.gov.tr
+    - host: hostname
       http:
         paths:
           - path: /
@@ -18,9 +22,4 @@ spec:
                 name: camunda
                 port:
                   number: 80
-
-#tls:
-#    - hosts:
-#      - camunda.192.168.10.127.nip.io
-#      secretName: camunda-tls
 
