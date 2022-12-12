@@ -4,13 +4,13 @@
 
 ## First of all , we create the Namespace.
 ```
- kubectl create ns camunda-bpm
+ $ kubectl create ns camunda-bpm
 ```
 ## Then , we edit the our ‘values.yaml’ file.
 ```
-kubectl apply -f values.yaml -n camunda-bpm
+$ kubectl apply -f values.yaml -n camunda-bpm
 ```
 ## And we deploy the ‘ingress.yaml’ file.
 ```
-kubectl apply -f ingress.yaml -n camunda-bpm
+$ kubectl apply -f ingress.yaml -n camunda-bpm
 ```
